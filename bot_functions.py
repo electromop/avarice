@@ -46,8 +46,8 @@ def creating_unique_catalog(message, call):
 
 def sending_start_message(bot, message, types):
     markup = creating_start_markup_buttons(types)
-    with open("images/greeting/AnimatedSticker.tgs", "rb") as sticker:
-        bot.send_sticker(message.chat.id, sticker)
+    # with open("images/greeting/AnimatedSticker.tgs", "rb") as sticker:
+    #     bot.send_sticker(message.chat.id, sticker)
     bot.send_message(message.chat.id, 'Привет, {0.first_name}, рады '.format(message.from_user) +
                      'видеть тебя в нашем боте!\nЭто магазин <b>' +
                      '{0.first_name}</b>.\nВыбирай товары в каталоге,'.format(bot.get_me()) +

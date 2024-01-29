@@ -81,6 +81,10 @@ def new_user(chat_id, first_name, username, phone_number):
     """, (chat_id, first_name, username, phone_number, 0, 0, 0))
     conn.commit()
 
+def make_admin(chat_id,):
+    cursor.execute("""UPDATE users SET is_administrator=1 WHERE chat_id=?""", 
+                   (chat_id,))
+    conn.commit()
 
 def new_order(chat_id, contacts, order_items, order_date, status, note):
     cursor.execute("""
@@ -91,7 +95,7 @@ def new_order(chat_id, contacts, order_items, order_date, status, note):
 
 
 def add_category(title):
-    cursor.execute("INSERT INTO category (title) VALUES (?)",
+    cursor.execute("INSERT INTO categories (title) VALUES (?)",
                    [title])
     conn.commit()
     log.debug(f"Added category: {title}")
@@ -191,8 +195,19 @@ def search_product(search_text):
     return products
 
 
-# add_product("cat2", "this is good cat item", 200, "images/item_1.png", 12)
+# add_product("cat2", "this is good cat item", 200, "images/item_1.png", 1)
+# add_product("cat3", "this is good cat item", 200, "images/item_1.png", 1)
+# add_product("cat4", "this is good cat item", 200, "images/item_1.png", 1)
+# add_product("cat5", "this is good cat item", 200, "images/item_1.png", 2)
+# add_product("cat6", "this is good cat item", 200, "images/item_1.png", 2)
+# add_product("cat7", "this is good cat item", 200, "images/item_1.png", 2)
+# add_product("cat8", "this is good cat item", 200, "images/item_1.png", 3)
+# add_category("#1")
+# add_category("#2")
+# add_category("#3")
+
 # new_user("1111", "Max2", None, "None")
+# make_admin("642500259")
 # pr = get_products()
 # print(get_products())
 # print(get_cart_by_id(778508362))

@@ -13,3 +13,5 @@ config/config.ini
 
 # My task file
 tasks
+
+__pycache__

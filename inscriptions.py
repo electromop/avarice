@@ -21,7 +21,7 @@ faq_text = "Привет! \n\n<b>Q</b>: Почему бот неотвечает
 contacts_text = "Вы всегда можете написать нам!\n\n" \
                 "Вот наш телефон: +38(095)-125-1673\n" \
                 "Администратор: @CigarettesShopAdmin\n" \
-                "Email: cigarettes.shop.ukraine@gmail.com"
+                "Email: cigarettes.shop@gmail.com"
 
 # If the message is unrecognized
 unrecognized_message = "Мы не смогли распознать ваше сообщение :("
