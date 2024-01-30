@@ -3,10 +3,10 @@
 /venv/
 
 # My images
-/images/
+# /images/
 
 # My database file
-database.sqlite
+# database.sqlite
 
 # My config
 config/config.ini
